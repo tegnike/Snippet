@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   # APIコントローラへのルーティング
   namespace :api, {format: 'json'} do
     namespace :v1 do
-      resources :snippets, only: [:index, :show, :create]
+      resources :snippets, except: [:new, :edit]
     end
   end
 end
